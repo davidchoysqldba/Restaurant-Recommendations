@@ -1,0 +1,7 @@
+PYTHONPATH="." luigi --module download_restaurant_grade_inspection_date DownloadRestaurantDataForDates --local-scheduler
+
+PYTHONPATH="." luigi --module save_restaurant_grade_db FindRestaurantData --local-scheduler
+
+PYTHONPATH="." luigi --module save_recommendation SaveRecommendationZipCode --local-scheduler
+
+PYTHONPATH="." luigi --module save_recommendation SaveRecommendationBoro --local-scheduler

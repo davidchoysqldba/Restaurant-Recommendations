@@ -1,0 +1,42 @@
+cd project_rest_data
+
+virtualenv --python=python3.5 env
+
+source env/bin/activate
+
+cd env
+
+source bin/activate
+
+pip install luigi
+pip install pandas
+
+###########################################################################################################
+# for running luigi scripts
+#PYTHONPATH="." luigi --module download_restaurant_grade_inspection_date DownloadRestaurantData --local-scheduler --date 2017-07-26
+
+#PYTHONPATH="." luigi --module download_restaurant_grade_inspection_date DownloadRestaurantDataForDates --local-scheduler
+
+#PYTHONPATH="." luigi --module pandas_analysis AnalyzeRestaurantData --local-scheduler --folder-name data
+
+#PYTHONPATH="." luigi --module save_restaurant_grade_db FindRestaurantData --local-scheduler
+###########################################################################################################
+
+
+#install mariadb client for python
+pip install PyMySQL
+
+
+# install pyspark libary 
+pip install pyspark
+
+sudo apt-get install python3-dev
+
+
+export SPARK_HOME=$SPARK_PATH
+PYTHONPATH="." luigi --module save_recommendation SaveRecommendationZipCode --local-scheduler
+
+
+#install pyyaml libary
+pip install pyyaml
+

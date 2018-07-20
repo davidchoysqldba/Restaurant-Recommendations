@@ -1,0 +1,6 @@
+echo [PID] 	[CPU] 	[MEM]  [PATH] &&  ps aux | awk '{print $2, $3, $4, $11}' | sort -k2rn | head -n 20
+
+echo [PID] 	[CPU] 	[MEM]  [PATH] &&  ps aux | awk '{print $2, $3, $4, $11}' | sort -k3rn | head -n 20
+
+ps -eo pcpu,pid,user,args | sort -k 1 -r | head -20
+
