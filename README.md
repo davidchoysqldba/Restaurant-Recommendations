@@ -5,10 +5,10 @@ There are two parts to this project:
 2. Restaurant Recommendations API
 
 Python Technology Stack:
-Luigi for pipelining
-Spark for Big Data data analysis
-Flask for exposing Data via webpage and API
+1. Luigi for pipelining
+2. Spark for Big Data data analysis
+3. Flask for exposing Data via webpage and API
 
 Folders: 
-project_rest_data
-FlaskWebApp
+1. project_rest_data
+2. FlaskWebApp
