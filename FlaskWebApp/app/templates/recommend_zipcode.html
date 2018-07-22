@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Zipcodes{% endblock %}
+
+{% block page_content %}
+
+<table border="1">
+    <tr>
+        <td>Zipcodes</td>
+        <td>Boro</td>
+        <td>Restaurant Name</td>
+        <td>Average Rating</td>
+        <td>Number of Ratings</td>
+    </tr>
+    {% for zipcode in zipcodes %}
+    <tr>
+        <td>{{ zipcode.zipcode}}</td>
+        <td>{{ zipcode.boro}}</td>
+        <td>{{ zipcode.dba}}</td>
+        <td>{{ zipcode.grade_average}}</td>
+        <td>{{ zipcode.grade_count}} </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

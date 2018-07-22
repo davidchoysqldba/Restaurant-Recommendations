@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Request Header Info{% endblock %}
+
+{% block page_content %}
+
+{# { header_info } #}
+
+{% for key, value in header_info.items() %}
+<!--
+<tr>
+  <td>Key: {{key}}</td>
+  <td>Value: {{value}}</td>
+</tr>
+-->
+
+  <p>Key: {{key}}, Value: {{value}}</p>
+
+{% endfor %}
+
+{% endblock %}

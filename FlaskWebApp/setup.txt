@@ -1,0 +1,35 @@
+virtualenv --python=python3.5 env
+
+source env/bin/activate
+
+
+#install flask library
+pip install flask
+
+pip install flask-bootstrap
+
+pip install flask-moment
+
+pip install flask-wt
+
+
+#install flask sqlalchemy library
+pip install flask-sqlalchemy
+
+pip install PyMySQL
+
+
+#Run web app with virtual env
+(venv) $ export FLASK_APP=webapp.py
+(venv) $ export FLASK_DEBUG=1
+(venv) $ flask run
+
+#########################################
+
+export FLASK_APP=webapp.py
+export FLASK_DEBUG=1
+flask run
+
+#########################################
+
+flask run --host 0.0.0.0 # connect from any computers
